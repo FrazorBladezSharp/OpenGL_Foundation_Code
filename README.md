@@ -15,6 +15,7 @@ C++ Standard Libs and
     GLFW3
     ImGui
     spdlog
+    glm
 
 # Please Note:
 

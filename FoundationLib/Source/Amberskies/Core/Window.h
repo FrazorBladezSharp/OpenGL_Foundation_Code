@@ -4,10 +4,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -19,6 +19,8 @@
 
 #include "Common.h"
 
+#include "Amberskies/Events/Event.h"
+
 
 
 namespace Amber
@@ -29,9 +31,9 @@ namespace Amber
 
 		std::string Title = "Test";
 
-		unsigned int Width = 900;
+		unsigned int Width = 100;
 
-		unsigned int Height = 500;
+		unsigned int Height = 100;
 
 		WindowProperties(
 			const std::string& title = "Amber Engine",

@@ -5,10 +5,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -25,25 +25,15 @@
 
 namespace Amber
 {
-
-    static bool s_GLFWInitialized = false;
-
-
+	static bool s_GLFWInitialized = false;
 
 	static void GLFWErrorCallback(
 		int error,
-		const char* description)
+		const char* description
+	)
 	{
-
-        AMBER_ERROR(
-                "[WindowsWindow] GLFW error ({0}): {1}",
-                error,
-                description
-                );
-
+		AMBER_ERROR("[WindowsWindow] GLFW error ({0}): {1}", error, description);
 	}
-
-
 
 	Window* Window::Create(const WindowProperties& props)
 	{
@@ -54,8 +44,6 @@ namespace Amber
 	
 
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "VirtualCallInCtorOrDtor"
 	WindowsWindow::WindowsWindow(const WindowProperties& props)
 	{
 		
@@ -64,19 +52,15 @@ namespace Amber
 		);
 
 	}
-#pragma clang diagnostic pop
 
 
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "VirtualCallInCtorOrDtor"
 	WindowsWindow::~WindowsWindow()
 	{
 
 		Shutdown();
 
 	}
-#pragma clang diagnostic pop
 
 
 
@@ -134,7 +118,7 @@ namespace Amber
 
 			int success = glfwInit();
 
-			AMBER_ASSERT(success, "[WindowsWindow]: Unable to initialize GLFW")
+			AMBER_ASSERT(success, "[WindowsWindow]: Unable to initialize GLFW");
 
 			glfwSetErrorCallback(
 				GLFWErrorCallback
@@ -196,7 +180,7 @@ namespace Amber
 				data.EventCallback(
 					event
 				);
-
+				
 			}
 		);
 
@@ -419,7 +403,6 @@ namespace Amber
 				);
 
 			}
-
 		);
 
 	}

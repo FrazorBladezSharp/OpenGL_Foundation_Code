@@ -4,10 +4,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -18,8 +18,13 @@
 
 
 #include "Common.h"
+#include "Platform/OpenGL/glad.h"
+#include <GLFW/glfw3.h>
 
-#include "Amberskies/Renderer/GFXContext.h"
+#include "Amberskies/Render3D/GFXContext.h"
+
+
+
 
 
 namespace Amber

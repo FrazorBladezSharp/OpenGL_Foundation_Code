@@ -5,7 +5,7 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
 * Github		: https://github.com/Avengez/Amberskies.git
@@ -16,10 +16,19 @@
 
 
 
+#ifdef _DEBUG
+
+
 
 #include <GLFW/glfw3.h>
 
+#include <imgui.h>
+#include <backends/imgui_impl_glfw.h>
+#include <backends/imgui_impl_opengl3.h>
+
 #include "Amberskies/Core/Application.h"
+
+#include "Platform/OpenGL/glad.h"
 
 
 
@@ -91,8 +100,6 @@ namespace Amber
 		
 		}
 
-	//	SetDarkThemeColors();
-
 		Application& app = 
 			Application::Get();
 		
@@ -130,13 +137,8 @@ namespace Amber
 
 	void ImGuiLayer::OnImGuiRender()
 	{
-
-		static bool show =
-			true;
-
-		ImGui::ShowDemoWindow(
-			&show
-		);
+		
+		// Empty
 
 	}
 
@@ -166,7 +168,7 @@ namespace Amber
 		
 		io.DisplaySize = 
 			ImVec2(
-                (float)app.GetWindow().GetWidth(),
+				(float)app.GetWindow().GetWidth(), 
 				(float)app.GetWindow().GetHeight()
 		);
 
@@ -196,3 +198,4 @@ namespace Amber
 	}
 
 }
+#endif // DEBUG

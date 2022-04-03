@@ -5,10 +5,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -52,9 +52,6 @@ namespace Amber
 		);
 
 		m_LayerInsertIndex++;
-
-        layer->OnAttach();
-
 	}
 
 
@@ -65,8 +62,6 @@ namespace Amber
 		m_Layers.emplace_back(
 			overlay
 		);
-
-        overlay->OnAttach();
 
 	}
 
@@ -84,8 +79,6 @@ namespace Amber
 
 		if (it != m_Layers.end())
 		{
-
-            layer->OnDetach();
 
 			m_Layers.erase(
 				it
@@ -110,15 +103,9 @@ namespace Amber
 		);
 
 		if (it != m_Layers.end())
-        {
-
-            overlay->OnDetach();
-
-            m_Layers.erase(
-                    it
-            );
-
-        }
+			m_Layers.erase(
+				it
+		);
 
 	}
 

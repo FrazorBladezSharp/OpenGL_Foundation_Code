@@ -4,10 +4,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 27/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *

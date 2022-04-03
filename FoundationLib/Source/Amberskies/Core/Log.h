@@ -1,21 +1,20 @@
+#pragma once
+
 
 /**
 * ________________________________________________________
-*
 * Project Created by Frazor Sharp : 16/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
 * ______________________________________________________*/
 
 
-#ifndef AMBER_LOG_H
-#define AMBER_LOG_H
 
 
 #include "Common.h"
@@ -29,28 +28,28 @@
 namespace Amber
 {
 
-    class Log
-    {
+	class Log
+	{
+		
+		static std::shared_ptr<spdlog::logger> s_AmberLogger;
 
-        static std::shared_ptr<spdlog::logger> s_AmberLogger;
+		static std::shared_ptr<spdlog::logger> s_DevLogger;
 
-        static std::shared_ptr<spdlog::logger> s_DevLogger;
+	public:
 
-    public:
+		static void Initialize();
 
-        static void Initialize();
+		inline static std::shared_ptr<spdlog::logger>& AmberLogger()
+		{
+			return s_AmberLogger;
+		}
 
-        inline static std::shared_ptr<spdlog::logger>& AmberLogger()
-        {
-            return s_AmberLogger;
-        }
+		inline static std::shared_ptr<spdlog::logger>& DevLogger()
+		{
+			return s_DevLogger;
+		}
 
-        inline static std::shared_ptr<spdlog::logger>& DevLogger()
-        {
-            return s_DevLogger;
-        }
-
-    };
+	};
 
 }
 
@@ -67,7 +66,3 @@ namespace Amber
 #define DEV_INFO(...) ::Amber::Log::DevLogger()->info(__VA_ARGS__)
 #define DEV_TRACE(...) ::Amber::Log::DevLogger()->trace(__VA_ARGS__)
 #define DEV_FATAL(...) ::Amber::Log::DevLogger()->fatal(__VA_ARGS__)
-
-
-
-#endif //AMBER_LOG_H

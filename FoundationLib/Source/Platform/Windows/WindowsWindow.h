@@ -4,11 +4,10 @@
 * ________________________________________________________
 * Project Created by Frazor Sharp : 17/01/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : Mini Game Engine Programming in C/C++
 *
 * Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber
- * .git
+* Github		: https://github.com/Avengez/Amberskies.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -21,6 +20,7 @@
 #include "Common.h"
 
 #include "Amberskies/Core/Window.h"
+
 #include "Platform/OpenGL/OpenGLContext.h"
 
 
@@ -40,8 +40,8 @@ namespace Amber
 			
 			std::string Title = "Default";
 			
-			unsigned int Width = 900;
-			unsigned int Height = 500;
+			unsigned int Width = 100;
+			unsigned int Height = 100;
 			
 			bool VSync = true;
 
@@ -71,7 +71,7 @@ namespace Amber
 		
 		bool IsVSync() const override;
 
-		inline virtual void* GetNativeWindow() const override { return m_Window; }
+		inline virtual void* GetNativeWindow() const { return m_Window; }
 	
 	private:
 		
