@@ -18,4 +18,6 @@ C++ Standard Libs and
 
 # Please Note:
 
-    these are raw code files to be improved upon and are not to be considered final versions.  You can choose any Development Environment to hold the files, then compile using the tools of that environment.
+    These are raw code files which should be improved upon and are not to be considered final versions.
+      
+    You can choose any Development Environment to hold the files, then compile using the tools of that environment.
