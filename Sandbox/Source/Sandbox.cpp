@@ -1,12 +1,12 @@
-
+﻿
 /**
 * ________________________________________________________
-* Project Created by Frazor Sharp : 16/01/2022
+* Project Created by Frazor Sharp : 04/04/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : OpenGL Foundation in C/C++
 *
-* Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Contact Email : frazor.sharp@virginmedia.com
+* Github		: https://github.com/FrazorBladezSharp/OpenGL_Foundation_Code.git
 * Twitch		: frazorbladezsharp
 * Youtube		: Frazor Sharp
 *
@@ -16,51 +16,53 @@
 
 #include <Amberskies.h>
 
-
-class FirstLayer : public Amber::Layer
-{
-
-    float m_SimpleTimer = 0.0f;
-
-public:
-
-    FirstLayer() :
-            Amber::Layer("FirstLayer")
-    {
-
-        DEV_INFO(
-                "First Layer Constructed"
-                );
-
-    }
+#include <iostream>
 
 
+//class FirstLayer : public Amber::Layer
+//{
 
-    void OnUpdate(Amber::DeltaTime deltaTime) override
-    {
+//    float m_SimpleTimer = 0.0f;
 
-        float dt =
-                deltaTime.GetSeconds();
+//public:
 
-        m_SimpleTimer +=
-                dt;
+//    FirstLayer() :
+//            Amber::Layer("FirstLayer")
+//    {
 
-        if (m_SimpleTimer >= 1)
-        {
+//        DEV_INFO(
+//                "First Layer Constructed"
+//                );
 
-            DEV_INFO(
-                    "Delta time : {0}s   {1}ms",
-                    dt,
-                    deltaTime.GetMilliseconds()
-            );
+//    }
 
-            m_SimpleTimer = 0.0f;
 
-        }
 
-    }
+//    void OnUpdate(Amber::DeltaTime deltaTime) override
+//    {
 
-};
+//        float dt =
+//                deltaTime.GetSeconds();
+
+//        m_SimpleTimer +=
+//                dt;
+
+//        if (m_SimpleTimer >= 1)
+//        {
+
+//            DEV_INFO(
+//                    "Delta time : {0}s   {1}ms",
+//                    dt,
+//                    deltaTime.GetMilliseconds()
+//            );
+
+//            m_SimpleTimer = 0.0f;
+
+//        }
+
+//    }
+
+//};
 
 
 
@@ -71,10 +73,13 @@ public:
 
     Sandbox()
     {
+        std::cout
+                << "[Sandbox] : Constructed"
+                << std::endl;
 
-        PushLayer(
-                new FirstLayer()
-        );
+//        PushLayer(
+//                new FirstLayer()
+//        );
 
     }
 
@@ -84,6 +89,14 @@ public:
 
 
 
+
+
+
+//*******************************
+// Main Entry Point for the User
+//*******************************
+#include <Amberskies/Core/MainEntryPoint.h>
+
 Amber::Application* Amber::CreateApplication()
 {
 
@@ -92,19 +105,3 @@ Amber::Application* Amber::CreateApplication()
 }
 
 
-
-int main(/*int argc, char* argv[]*/)
-{
-
-    Amber::Welcome();
-
-    auto app =
-            Amber::CreateApplication();
-
-    app->Run();
-
-    delete app;
-
-    return 0;
-
-}

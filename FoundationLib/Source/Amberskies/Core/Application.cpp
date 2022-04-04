@@ -3,31 +3,30 @@
 
 /**
 * ________________________________________________________
-* Project Created by Frazor Sharp : 16/01/2022
+* Project Created by Frazor Sharp : 04/04/2022
 *
-* Twitch : Mini Game Engine Programming in C/C++
+* Twitch : OpenGL Foundation in C/C++
 *
-* Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amberskies.git
+* Contact Email : frazor.sharp@virginmedia.com
+* Github		: https://github.com/FrazorBladezSharp/OpenGL_Foundation_Code.git
 * Twitch		: frazorbladezsharp
-* Youtube		: Frazor Sharp
-*
+* Youtube		: Frazor Sharp*
 * ______________________________________________________*/
 
 
 
 
-#include <backends/imgui_impl_glfw.h>
+//#include <backends/imgui_impl_glfw.h>
 
-#include "Amberskies/Core/Log.h"
+//#include "Amberskies/Core/Log.h"
 
-#include "Amberskies/Input/Input.h"
+//#include "Amberskies/Input/Input.h"
 
-#include "Amberskies/ECS/Scene.h"
+//#include "Amberskies/ECS/Scene.h"
 
-#include "Amberskies/Render3D/Renderer.h"
+//#include "Amberskies/Render3D/Renderer.h"
 
-#include <GLFW/glfw3.h>
+//#include <GLFW/glfw3.h>
 
 
 
@@ -43,21 +42,21 @@ namespace Amber
 		
 	{
 
-		AMBER_ASSERT(!s_Instance, "Application already exists.");
+//		AMBER_ASSERT(!s_Instance, "Application already exists.");
 
 		s_Instance =
 			this;
 
-		m_Window = 
-			std::unique_ptr<Window>(
-				Window::Create()
-			);
+//		m_Window =
+//			std::unique_ptr<Window>(
+//				Window::Create()
+//			);
 
-		m_Window->SetEventCallback(
-			BIND_EVENT_FN(Application::OnEvent)
-		);
+//		m_Window->SetEventCallback(
+//			BIND_EVENT_FN(Application::OnEvent)
+//		);
 
-		Renderer::Initialize();
+//		Renderer::Initialize();
 
 #ifdef _DEBUG
 		m_ImGuiLayer =
@@ -89,11 +88,11 @@ namespace Amber
 			float time =
 				1.0f;
 
-			time =
-				(float)glfwGetTime();
+//			time =
+//				(float)glfwGetTime();
 
-			DeltaTime deltaTime = 
-				time - m_LastFrameTime;
+//			DeltaTime deltaTime =
+//				time - m_LastFrameTime;
 
 			m_LastFrameTime = time;
 
@@ -102,17 +101,17 @@ namespace Amber
 			if (m_WindowVisible)
 			{
 
-				if (Amber::Input::IsKeyPressed(AMBER_KEY_ESCAPE))
-				{
+//				if (Amber::Input::IsKeyPressed(AMBER_KEY_ESCAPE))
+//				{
 
-					CloseApplication();
+//					CloseApplication();
 
-					DEV_INFO("The escape key was pressed");
+//					DEV_INFO("The escape key was pressed");
 
-				}
+//				}
 
-				for (Layer* layer : m_LayerStack)
-					layer->OnUpdate(deltaTime);
+//				for (Layer* layer : m_LayerStack)
+//					layer->OnUpdate(deltaTime);
 			
 			}
 
@@ -125,7 +124,7 @@ namespace Amber
 			m_ImGuiLayer->End();
 #endif // DEBUG
 
-			m_Window->OnUpdate();
+            //m_Window->OnUpdate();
 				
 		}
 
@@ -133,68 +132,68 @@ namespace Amber
 
 
 
-	void Application::OnEvent(
-		Event& e
-	)
-	{
+//	void Application::OnEvent(
+//		Event& e
+//	)
+//	{
 
-		EventDispatcher dispatcher(
-			e
-		);
+//		EventDispatcher dispatcher(
+//			e
+//		);
 
-		dispatcher.Dispatch<WindowCloseEvent>(
-			BIND_EVENT_FN(Application::OnWindowClose)
-		);
+//		dispatcher.Dispatch<WindowCloseEvent>(
+//			BIND_EVENT_FN(Application::OnWindowClose)
+//		);
 
-		dispatcher.Dispatch<WindowResizeEvent>(
-			BIND_EVENT_FN(Application::OnWindowResize)
-			);
+//		dispatcher.Dispatch<WindowResizeEvent>(
+//			BIND_EVENT_FN(Application::OnWindowResize)
+//			);
 
-		//AMBER_TRACE("event : {0}", e);
+//		//AMBER_TRACE("event : {0}", e);
 
-		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
-		{
+//		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin(); )
+//		{
 
-			(*--it)->OnEvent(
-				e
-			);
+//			(*--it)->OnEvent(
+//				e
+//			);
 
-			if (e.Handled)
-				break;
+//			if (e.Handled)
+//				break;
 
-		}
+//		}
 
-	}
-
-
-
-	void Application::PushLayer(
-		Layer* layer
-	)
-	{
-
-		m_LayerStack.PushLayer(
-			layer
-		);
-
-		layer->OnAttach();
-
-	}
+//	}
 
 
 
-	void Application::PushOverlay(
-		Layer* layer
-	)
-	{
+//	void Application::PushLayer(
+//		Layer* layer
+//	)
+//	{
 
-		m_LayerStack.PushOverLay(
-			layer
-		);
+//		m_LayerStack.PushLayer(
+//			layer
+//		);
 
-		layer->OnAttach();
+//		layer->OnAttach();
 
-	}
+//	}
+
+
+
+//	void Application::PushOverlay(
+//		Layer* layer
+//	)
+//	{
+
+//		m_LayerStack.PushOverLay(
+//			layer
+//		);
+
+//		layer->OnAttach();
+
+//	}
 
 
 
@@ -207,34 +206,34 @@ namespace Amber
 
 
 
-	bool Application::OnWindowResize(
-		WindowResizeEvent& e)
-	{
+//	bool Application::OnWindowResize(
+//		WindowResizeEvent& e)
+//	{
 
-		if (e.GetWidth() <= 0 || e.GetHeight() <= 0)
-			m_WindowVisible = false;
-		else
-			m_WindowVisible = true;
+//		if (e.GetWidth() <= 0 || e.GetHeight() <= 0)
+//			m_WindowVisible = false;
+//		else
+//			m_WindowVisible = true;
 
-		Renderer::OnWindowResize(
-			e.GetWidth(),
-			e.GetHeight()
-		);
+//		Renderer::OnWindowResize(
+//			e.GetWidth(),
+//			e.GetHeight()
+//		);
 
-		return false;
+//		return false;
 	
-	}
+//	}
 
 
 
-	bool Application::OnWindowClose(
-		WindowCloseEvent& e
-	)
-	{
-		m_Running =
-			false;
+//	bool Application::OnWindowClose(
+//		WindowCloseEvent& e
+//	)
+//	{
+//		m_Running =
+//			false;
 
-		return true;
-	}
+//		return true;
+//	}
 
 }

@@ -2,14 +2,14 @@
 /**
 * ________________________________________________________
 *
-* Project Created by Frazor Sharp : 16/01/2022
+* Project Created by Frazor Sharp : 04/04/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : OpenGL Foundation in C/C++
 *
-* Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Contact Email : frazor.sharp@virginmedia.com
+* Github		: https://github.com/FrazorBladezSharp/OpenGL_Foundation_Code.git
 * Twitch		: frazorbladezsharp
-* Youtube		: Frazor Sharp
+* Youtube		: Frazor Sharp*
 *
 * ______________________________________________________*/
 
@@ -17,35 +17,35 @@
 #pragma once
 
 
-#define AMBER_PLATFORM_WINDOWS
-#define AMBER_DEBUG
+//#define AMBER_PLATFORM_WINDOWS
+//#define AMBER_DEBUG
 
 
-#ifdef AMBER_PLATFORM_WINDOWS
+//#ifdef AMBER_PLATFORM_WINDOWS
 
-#include <Windows.h>
+//#include <Windows.h>
 
-#else
+//#else
 
-#error Amber supports windows only
+//#error Amber supports windows only
 
-#endif
-
-
+//#endif
 
 
-#include "Test.h"
 
-#include <imgui.h>
-#include <backends/imgui_impl_glfw.h>
-#include <backends/imgui_impl_opengl3.h>
+
+//#include "Test.h"
+
+//#include <imgui.h>
+//#include <backends/imgui_impl_glfw.h>
+//#include <backends/imgui_impl_opengl3.h>
 
 #include "Amberskies/Core/Application.h"
-#include "Amberskies/Core/Log.h"
-#include "Amberskies/Core/Layer.h"
-#include "Amberskies/Core/DeltaTime.h"
+//#include "Amberskies/Core/Log.h"
+//#include "Amberskies/Core/Layer.h"
+//#include "Amberskies/Core/DeltaTime.h"
 
-#include "Amberskies/Events/Event.h"
+//#include "Amberskies/Events/Event.h"
 
 //#include "Amberskies/Gui/ImGuiLayer.h"
 

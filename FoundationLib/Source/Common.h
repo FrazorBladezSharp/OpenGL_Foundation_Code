@@ -7,64 +7,64 @@
 
 /**
 * ________________________________________________________
-* Project Created by Frazor Sharp : 16/01/2022
+* Project Created by Frazor Sharp : 04/04/2022
 *
-* Twitch : Simple Server Programming in C/C++
+* Twitch : OpenGL Foundation in C/C++
 *
-* Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amber.git
+* Contact Email : frazor.sharp@virginmedia.com
+* Github		: https://github.com/FrazorBladezSharp/OpenGL_Foundation_Code.git
 * Twitch		: frazorbladezsharp
-* Youtube		: Frazor Sharp
+* Youtube		: Frazor Sharp*
 *
 * ______________________________________________________*/
 
 
-#define AMBER_PLATFORM_WINDOWS
-#define AMBER_DEBUG
+//#define AMBER_PLATFORM_WINDOWS
+//#define AMBER_DEBUG
 
 
-#ifdef AMBER_PLATFORM_WINDOWS
+//#ifdef AMBER_PLATFORM_WINDOWS
 
-#include <Windows.h>
+//#include <Windows.h>
 
-#else
+//#else
 
-#error Amber supports windows only
+//#error Amber supports windows only
 
-#endif
-
-
-
-#ifdef AMBER_DEBUG
-
-#define AMBER_ENABLE_ASSERTS
-
-#endif
+//#endif
 
 
 
-#ifdef AMBER_ENABLE_ASSERTS
+//#ifdef AMBER_DEBUG
 
-#define DEV_ASSERT(x, ...) { if(!(x)) { DEV_ERROR("Assert Failure: {0}", __VA_ARGS__); __debugbreak(); }}
+//#define AMBER_ENABLE_ASSERTS
 
-#define AMBER_ASSERT(x, ...) { if(!(x)) { AMBER_ERROR("Assert Failure: {0}", __VA_ARGS__); __debugbreak(); }}
-
-#else
-
-#define DEV_ASSERT(x, ...)
-
-	#define AMBER_ASSERT(x, ...)
-
-#endif
+//#endif
 
 
 
-#define BIT(x) (1 << x)
+//#ifdef AMBER_ENABLE_ASSERTS
 
-#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
+//#define DEV_ASSERT(x, ...) { if(!(x)) { DEV_ERROR("Assert Failure: {0}", __VA_ARGS__); __debugbreak(); }}
 
-#include "Platform/OpenGL/glad.h"
-#include <GLFW/glfw3.h>
+//#define AMBER_ASSERT(x, ...) { if(!(x)) { AMBER_ERROR("Assert Failure: {0}", __VA_ARGS__); __debugbreak(); }}
+
+//#else
+
+//#define DEV_ASSERT(x, ...)
+
+//	#define AMBER_ASSERT(x, ...)
+
+//#endif
+
+
+
+//#define BIT(x) (1 << x)
+
+//#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
+
+//#include "Platform/OpenGL/glad.h"
+//#include <GLFW/glfw3.h>
 
 
 #include <algorithm>
@@ -79,17 +79,17 @@
 #include <vector>
 
 
-#include <imgui.h>
-#include <backends/imgui_impl_glfw.h>
-#include <backends/imgui_impl_opengl3.h>
+//#include <imgui.h>
+//#include <backends/imgui_impl_glfw.h>
+//#include <backends/imgui_impl_opengl3.h>
 
-#include "Amberskies/Core/Log.h"
-#include "Amberskies/Core/DeltaTime.h"
+//#include "Amberskies/Core/Log.h"
+//#include "Amberskies/Core/DeltaTime.h"
 
-#include "Amberskies/Events/Event.h"
-#include "Amberskies/Events/ApplicationEvent.h"
-#include "Amberskies/Events/KeyEvent.h"
-#include "Amberskies/Events/MouseEvent.h"
+//#include "Amberskies/Events/Event.h"
+//#include "Amberskies/Events/ApplicationEvent.h"
+//#include "Amberskies/Events/KeyEvent.h"
+//#include "Amberskies/Events/MouseEvent.h"
 
 
 

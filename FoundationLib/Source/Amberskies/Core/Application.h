@@ -3,26 +3,25 @@
 
 /**
 * ________________________________________________________
-* Project Created by Frazor Sharp : 16/01/2022
+* Project Created by Frazor Sharp : 04/04/2022
 *
-* Twitch : Mini Game Engine Programming in C/C++
+* Twitch : OpenGL Foundation in C/C++
 *
-* Contact Email : daocamberskies@googlemail.com
-* Github		: https://github.com/Avengez/Amberskies.git
+* Contact Email : frazor.sharp@virginmedia.com
+* Github		: https://github.com/FrazorBladezSharp/OpenGL_Foundation_Code.git
 * Twitch		: frazorbladezsharp
-* Youtube		: Frazor Sharp
-*
+* Youtube		: Frazor Sharp*
 * ______________________________________________________*/
 
 
 #include "Common.h"
 
-#include "Amberskies/Core/Window.h"
-#include "Amberskies/Core/DeltaTime.h"
-#include "Amberskies/Core/LayerStack.h"
+//#include "Amberskies/Core/Window.h"
+//#include "Amberskies/Core/DeltaTime.h"
+//#include "Amberskies/Core/LayerStack.h"
 
-#include "Amberskies/Events/Event.h"
-#include "Amberskies/Events/ApplicationEvent.h"
+//#include "Amberskies/Events/Event.h"
+//#include "Amberskies/Events/ApplicationEvent.h"
 
 #ifdef _DEBUG
 #include "Amberskies/Gui/ImGuiLayer.h"
@@ -46,9 +45,9 @@ namespace Amber
 		bool m_WindowVisible =
 			true;
 
-		LayerStack m_LayerStack;
+//		LayerStack m_LayerStack;
 
-		std::unique_ptr<Window> m_Window;
+//		std::unique_ptr<Window> m_Window;
 
 #ifdef _DEBUG
 		ImGuiLayer* m_ImGuiLayer;
@@ -64,32 +63,32 @@ namespace Amber
 
 		void Run();
 
-		void OnEvent(
-			Event& e
-		);
+//		void OnEvent(
+//			Event& e
+//		);
 
-		void PushLayer(
-			Layer* layer
-		);
+//		void PushLayer(
+//			Layer* layer
+//		);
 
-		void PushOverlay(
-			Layer* layer
-		);
+//		void PushOverlay(
+//			Layer* layer
+//		);
 
 		void CloseApplication();
 
 		inline static Application& Get() { return *s_Instance; }
-		inline Window& GetWindow() { return *m_Window; }
+//		inline Window& GetWindow() { return *m_Window; }
 
 	private:
 
-		bool OnWindowResize(
-			WindowResizeEvent& e
-		);
+//		bool OnWindowResize(
+//			WindowResizeEvent& e
+//		);
 
-		bool OnWindowClose(
-			WindowCloseEvent& e
-		);
+//		bool OnWindowClose(
+//			WindowCloseEvent& e
+//		);
 
 	};
 

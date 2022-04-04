@@ -15,7 +15,7 @@
 
 
 
-#ifdef AMBER_PLATFORM_WINDOWS
+//#ifdef AMBER_PLATFORM_WINDOWS
 
 
 extern Amber::Application* Amber::CreateApplication();
@@ -23,11 +23,15 @@ extern Amber::Application* Amber::CreateApplication();
 int main(int argc, char** argv)
 {
 
-	Amber::Log::Initialize();
+    std::cout
+            << argv[argc-1]
+            << std::endl;
 
-	printf(
-		"\nWelcome to Amberskies.\n\n"
-	);
+    //Amber::Log::Initialize();
+
+//	printf(
+//		"\nWelcome to Amberskies.\n\n"
+//	);
 
 	auto app = 
 		Amber::CreateApplication();
@@ -38,4 +42,4 @@ int main(int argc, char** argv)
 
 }
 
-#endif
+//#endif
