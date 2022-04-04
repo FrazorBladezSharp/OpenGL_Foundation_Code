@@ -6,6 +6,7 @@ The files here represent a dedicated system for the development of 3D Software u
 
 This code base can be converted to use Vulkan, DirectX, or any other 3D rendering system without too much work.  This can be achieved by re-writing / adding a Platform directory of your choice and adjusting the core Window file to hook into that platform as shown with this OpenGL version.
 
+# Current Development
 Currently reconstructing the static library using QT Creator, pro files have been generated.
 
 
