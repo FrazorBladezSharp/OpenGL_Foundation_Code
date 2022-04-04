@@ -490,3 +490,7 @@ FoundationLib/Dependencies/spdlog/tests/test_systemd.cpp
 FoundationLib/Dependencies/spdlog/tests/test_time_point.cpp
 FoundationLib/Dependencies/spdlog/tests/utils.cpp
 FoundationLib/Dependencies/spdlog/tests/utils.h
+
+build-Foundation-Desktop_Qt_6_2_3_GCC_64bit-Debug/
+
+build-Sandbox-Desktop_Qt_6_2_3_GCC_64bit-Debug/
