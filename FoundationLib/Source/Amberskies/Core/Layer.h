@@ -21,7 +21,7 @@
 
 #include "Amberskies/Core/DeltaTime.h"
 
-#include "Amberskies/Events/Event.h"
+//#include "Amberskies/Events/Event.h"
 
 
 
@@ -38,7 +38,7 @@ namespace Amber
 			const std::string& name = "Layer"
 		);
 
-		virtual ~Layer();
+        virtual ~Layer();
 
 		virtual void OnAttach() {}
 		
@@ -50,9 +50,9 @@ namespace Amber
 		virtual void OnImGuiRender() {}
 #endif // DEBUG
 
-		virtual void OnEvent(
-			Event& event
-		) {}
+//		virtual void OnEvent(
+//			Event& event
+//		) {}
 
 		inline const std::string& GetName() const { return m_DebugName; }
 

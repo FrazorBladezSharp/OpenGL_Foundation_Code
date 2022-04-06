@@ -19,24 +19,31 @@
 #include <iostream>
 
 
-//class FirstLayer : public Amber::Layer
-//{
+class FirstLayer : public Amber::Layer
+{
 
-//    float m_SimpleTimer = 0.0f;
+    float m_SimpleTimer = 0.0f;
 
-//public:
+public:
 
-//    FirstLayer() :
-//            Amber::Layer("FirstLayer")
-//    {
+    FirstLayer() :
+            Amber::Layer("FirstLayer")
+    {
+
+        std::cout
+                << "[FirstLayer] : Constructed. \n";
 
 //        DEV_INFO(
 //                "First Layer Constructed"
 //                );
 
-//    }
+    }
 
-
+    ~FirstLayer() override
+    {
+        std::cout
+                << "[FirstLayer] : Destroyed \n";
+    }
 
 //    void OnUpdate(Amber::DeltaTime deltaTime) override
 //    {
@@ -62,7 +69,7 @@
 
 //    }
 
-//};
+};
 
 
 
@@ -74,16 +81,19 @@ public:
     Sandbox()
     {
         std::cout
-                << "[Sandbox] : Constructed"
-                << std::endl;
+                << "[Sandbox] : Constructed \n";
 
-//        PushLayer(
-//                new FirstLayer()
-//        );
+        PushLayer(
+                new FirstLayer()
+        );
 
     }
 
-    ~Sandbox() override = default;
+    ~Sandbox() override
+    {
+        std::cout
+                << "[Sandbox] : Destroyed \n";
+    }
 
 };
 

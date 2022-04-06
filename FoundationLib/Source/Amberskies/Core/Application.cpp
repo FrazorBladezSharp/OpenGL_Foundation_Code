@@ -167,18 +167,18 @@ namespace Amber
 
 
 
-//	void Application::PushLayer(
-//		Layer* layer
-//	)
-//	{
+    void Application::PushLayer(
+        Layer* layer
+    )
+    {
 
 //		m_LayerStack.PushLayer(
 //			layer
 //		);
 
-//		layer->OnAttach();
+        layer->OnAttach();
 
-//	}
+    }
 
 
 

@@ -5,6 +5,8 @@
 TEMPLATE = app
 TARGET = Sandbox
 
+CONFIG += c17 c++17
+
 INCLUDEPATH += .
 INCLUDEPATH += $$PWD/../FoundationLib/Source
 

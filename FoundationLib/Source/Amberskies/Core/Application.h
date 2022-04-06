@@ -18,6 +18,7 @@
 
 //#include "Amberskies/Core/Window.h"
 //#include "Amberskies/Core/DeltaTime.h"
+#include "Amberskies/Core/Layer.h"
 //#include "Amberskies/Core/LayerStack.h"
 
 //#include "Amberskies/Events/Event.h"
@@ -40,10 +41,10 @@ namespace Amber
 		static Application* s_Instance;
 
 		bool m_Running =
-			true;
+            false;
 
 		bool m_WindowVisible =
-			true;
+            false;
 
 //		LayerStack m_LayerStack;
 
@@ -67,9 +68,9 @@ namespace Amber
 //			Event& e
 //		);
 
-//		void PushLayer(
-//			Layer* layer
-//		);
+        void PushLayer(
+            Layer* layer
+        );
 
 //		void PushOverlay(
 //			Layer* layer

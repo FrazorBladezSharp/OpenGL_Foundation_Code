@@ -28,11 +28,9 @@ namespace Amber
 		//Empty
 	}
 
-
-
-	Layer::~Layer()
-	{
-		//Empty
-	}
+    Layer::~Layer()
+    {
+        //Empty
+    }
 
 }
